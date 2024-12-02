@@ -2,11 +2,11 @@ name: Update README with GitHub Stats
 
 on:
   schedule:
-    - cron: "0 * * * *" # Update every hour
+    - cron: "0 * * * *"
   push:
     branches:
       - main
-  workflow_dispatch: # Manual trigger
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -19,4 +19,3 @@ jobs:
         uses: anmol098/waka-readme-stats@master
         env:
           GH_TOKEN: ${{ secrets.ghStatsToken }}
-        with:
