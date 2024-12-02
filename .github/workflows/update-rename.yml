@@ -18,6 +18,6 @@ jobs:
       - name: Update README
         uses: teoxoy/github-profile-views-counter@v1
         env:
-          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+          GH_TOKEN: ${{ secrets.ghStatsToken }}
         with:
           path: README.md
