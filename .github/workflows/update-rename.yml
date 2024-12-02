@@ -1,0 +1,23 @@
+name: Update README with GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 * * * *" # Mise à jour toutes les heures
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Lancement manuel possible
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Update README
+        uses: teoxoy/github-profile-views-counter@v1
+        env:
+          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        with:
+          path: README.md
