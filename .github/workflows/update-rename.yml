@@ -18,4 +18,4 @@ jobs:
       - name: Update README
         uses: anmol098/waka-readme-stats@master
         env:
-          GH_TOKEN: ${{ secrets.ghStatsToken }}
+          GH_TOKEN: ${{ secrets.GHSTATSTOKEN }}
