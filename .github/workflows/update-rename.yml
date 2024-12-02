@@ -2,11 +2,11 @@ name: Update README with GitHub Stats
 
 on:
   schedule:
-    - cron: "0 * * * *" # Mise à jour toutes les heures
+    - cron: "0 * * * *" # Update every hour
   push:
     branches:
       - main
-  workflow_dispatch: # Lancement manuel possible
+  workflow_dispatch: # Manual trigger
 
 jobs:
   update-readme:
@@ -20,4 +20,3 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ghStatsToken }}
         with:
-          path: README.md
